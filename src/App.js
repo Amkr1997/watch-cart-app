@@ -1,4 +1,3 @@
-//import Cart from "./components/cart/Cart";
 import CartProvider from "./components/contextProviders/CartProvider";
 import Header from "./components/header/Header";
 import Watches from "./components/watches/Watches";
@@ -6,17 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Cart from "./components/cart/Cart";
 
 function App() {
-  /*
-  const [cartIsVisible, setCartIsVisible] = useState(false);
-
-  function hideCartHandler() {
-    setCartIsVisible(false);
-  }
-
-  function showCartHandler() {
-    setCartIsVisible(true);
-  }*/
-
   return (
     <CartProvider>
       <Router>
@@ -31,7 +19,6 @@ function App() {
               </section>
             }
           />
-          {/*cartIsVisible && <Cart onHideCart={hideCartHandler} />*/}
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </Router>
